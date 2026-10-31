@@ -19,6 +19,7 @@ const envSchema = z.object({
   DATABASE_URL: z.string().min(1),
   REDIS_URL: z.string().url(),
   ELASTICSEARCH_URL: z.string().url(),
+  ELASTICSEARCH_API_KEY: z.string().min(1),
   SESSION_SECRET: z.string().min(32),
   TOKEN_ENCRYPTION_KEY: z.string().regex(/^[a-fA-F0-9]{64}$/),
   GOOGLE_CLIENT_ID: z.string().optional().default(""),
